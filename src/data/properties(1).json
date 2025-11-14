@@ -1,0 +1,118 @@
+{
+	"properties": [
+        {
+            "id":"prop1",
+			"type":"House",
+            "bedrooms":3,
+			"price":750000,
+			"tenure":"Freehold",
+			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
+			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
+			"picture":"images/",
+			"url":"properties/prop1.html",
+            "added": {
+                "month":"October",
+                "day":12,
+                "year":2022
+            }
+        },
+		{
+            "id":"prop2",
+			"type":"Flat",
+            "bedrooms":2,
+			"price":399995,
+			"tenure":"Freehold",
+			"description":"inPresented excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
+			"location":"Crofton Road Orpington BR6",
+			"picture":"images/",
+			"url":"properties/prop2.html",
+            "added": {
+                "month":"September",
+                "day":14,
+                "year":2022
+            }
+        },
+        {
+            "id": "prop3",
+            "type": "Flat",
+            "bedrooms": 1,
+            "price": 395000,
+            "tenure": "Leasehold",
+            "description": "A stylish one-bedroom apartment situated in the heart of Westminster, offering convenient access to London's finest attractions. This modern residence features an open-plan living area with high-specification kitchen including integrated appliances, a generously proportioned double bedroom with built-in storage, and a contemporary bathroom suite. The property benefits from secure entry system, lift access, and excellent natural light throughout. Located moments from St James's Park tube station and within walking distance of the West End, this apartment represents an ideal central London base for professionals.",
+            "location": "Westminster, London SW1",
+            "picture": "images/",
+            "url": "properties/prop3.html",
+            "added": {
+                "month": "November",
+                "day": 7,
+                "year": 2024
+            }
+        },
+        {
+            "id": "prop4", 
+            "type": "House",
+            "bedrooms": 5,
+            "price": 825000,
+            "tenure": "Freehold",
+            "description": "An impressive five-bedroom detached family home set within the coveted Hampstead conservation area. This substantial property boasts multiple reception rooms including a formal drawing room with feature fireplace, a modern fitted kitchen/breakfast room opening to the landscaped garden, and a separate dining room perfect for entertaining. The first floor accommodation comprises four double bedrooms and a family bathroom, while the second floor features a generous principal suite with en-suite shower room. Externally, the property offers off-street parking and a private rear garden, while being within close proximity to Hampstead Heath and the Underground station.",
+            "location": "Hampstead, London NW3",
+            "picture": "images/", 
+            "url": "properties/prop4.html",
+            "added": {
+                "month": "August", 
+                "day": 22,
+                "year": 2024
+            }
+        },
+        {
+            "id": "prop5",
+            "type": "Maisonette",
+            "bedrooms": 2, 
+            "price": 450000,
+            "tenure": "Leasehold",
+            "description": "A beautifully presented two-bedroom maisonette occupying the first and second floors of a period building in London's prestigious West End. The property features a bright reception room with high ceilings and original features, a modern fitted kitchen, two well-proportioned double bedrooms, and a family bathroom. This characterful home retains many period details including cornice work and fireplaces while offering contemporary living. The location is exceptional, being moments from Oxford Street shopping, Theatreland, and multiple tube stations, making it ideal for those seeking a central London lifestyle.",
+            "location": "West End, London W1",
+            "picture": "images/",
+            "url": "properties/prop5.html", 
+            "added": {
+                "month": "September",
+                "day": 18,
+                "year": 2024
+            }
+        },
+        {
+            "id": "prop6",
+            "type": "Bungalow", 
+            "bedrooms": 2,
+            "price": 295000,
+            "tenure": "Freehold",
+            "description": "A charming two-bedroom bungalow situated in a quiet cul-de-sac in Croydon, offering single-level living in a convenient location. The accommodation comprises a welcoming entrance hall, a spacious through-lounge with feature fireplace, a fitted kitchen with dining area, two generous bedrooms, and a modern bathroom suite. The property benefits from uPVC double glazing, gas central heating, and a well-maintained rear garden with patio area and lawn. Located within walking distance of local shops and amenities, with excellent transport links to Central London via East Croydon station, this bungalow represents an ideal retirement or first-time purchase.",
+            "location": "Croydon CR0", 
+            "picture": "images/",
+            "url": "properties/prop6.html",
+            "added": {
+                "month": "November",
+                "day": 1, 
+                "year": 2025
+            }
+        },
+        {
+            "id": "prop7",
+            "type": "House",
+            "bedrooms": 3,
+            "price": 375000,
+            "tenure": "Freehold", 
+            "description": "A well-presented three-bedroom semi-detached family home located on Bromley Road, offering spacious accommodation spread over two floors. The property features a welcoming entrance hall, a bright living room with bay window, a separate dining room leading to the fitted kitchen, and a convenient ground floor cloakroom. To the first floor there are three good-sized bedrooms and a family bathroom. Externally, the property benefits from a private rear garden and off-street parking. Situated within the catchment area for excellent schools and with easy access to Bromley town centre and transport links, this home is perfect for growing families.",
+            "location": "Bromley Road, Bromley BR3",
+            "picture": "images/",
+            "url": "properties/prop7.html",
+            "added": {
+                "month": "October",
+                "day": 15,
+                "year": 2025
+            }
+        }
+
+ 
+
+]}
