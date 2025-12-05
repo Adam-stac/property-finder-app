@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
 import PropertyList from './components/PropertyList';
-import SearchForm from './components/searchForm';
+import SearchForm from './components/SearchForm';
 import propertiesData from './data/properties.json';
 
 

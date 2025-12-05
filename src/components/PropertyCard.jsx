@@ -1,5 +1,5 @@
 const PropertyCard = ({ property }) => {
-  const description = property.description;
+  const description = property.shortDescription;
   
   return (
     <div className="property-card">
