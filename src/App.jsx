@@ -32,7 +32,16 @@ function App() {
     if (searchCriteria.maxBedrooms && property.bedrooms > parseInt(searchCriteria.maxBedrooms)) {
       return false;
     }
-    
+
+    //Date filter
+    if (searchCriteria.addedFrom && property.added < searchCriteria.addedFrom) {
+      return false;
+    }
+
+    if (searchCriteria.addedTo && property.added > searchCriteria.addedTo) {
+      return false;
+    }
+
     //Postcode filter 
     if (searchCriteria.postcode) {
       //postcode area (e.g., "BR5" from "Petts Wood, Orpington BR5")

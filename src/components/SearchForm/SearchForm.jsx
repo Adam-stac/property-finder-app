@@ -9,7 +9,8 @@ const SearchForm = ({ onSearch }) => {
     minBedrooms: '',
     maxBedrooms: '',
     postcode: '',
-    dateAdded: ''
+    addedFrom: "",
+    addedTo: ""
   });
 
   const handleChange = (field, value) => {
@@ -75,16 +76,6 @@ const SearchForm = ({ onSearch }) => {
       </div>
 
       <div className="form-group">
-      <label>Postcode Area</label>
-      <input
-          type="text"
-          placeholder="e.g., BR1, NW1"
-          value={searchCriteria.postcode}
-          onChange={(e) => handleChange('postcode', e.target.value.toUpperCase())}
-        />
-      </div>
-
-      <div className="form-group">
         <label>Bedrooms</label>
         <div className="range-inputs">
           <select
@@ -112,6 +103,35 @@ const SearchForm = ({ onSearch }) => {
           </select>
         </div>
       </div>
+
+     <div className="form-group">
+      <label>Date Added</label>
+      <div className="range-inputs">
+        <input 
+          type="date"
+          value={searchCriteria.addedFrom}
+          onChange={(e) => handleChange("addedFrom", e.target.value)}
+        />
+        <span>to</span>
+        <input 
+          type="date"
+          value={searchCriteria.addedTo}
+          onChange={(e) => handleChange("addedTo", e.target.value)}
+        />
+      </div>
+     </div>
+
+
+      <div className="form-group">
+      <label>Postcode Area</label>
+      <input
+          type="text"
+          placeholder="e.g., BR1, NW1"
+          value={searchCriteria.postcode}
+          onChange={(e) => handleChange('postcode', e.target.value.toUpperCase())}
+        />
+      </div>
+
 
       <div className="form-buttons">
         <button type="submit">Search</button>
