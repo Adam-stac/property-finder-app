@@ -1,3 +1,5 @@
+import './PropertyCard.css';
+
 const PropertyCard = ({ property }) => {
   const description = property.shortDescription;
   

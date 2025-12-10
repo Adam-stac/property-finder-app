@@ -1,3 +1,4 @@
+import './SearchForm.css';
 import { useState } from 'react';
 
 const SearchForm = ({ onSearch }) => {
@@ -74,6 +75,16 @@ const SearchForm = ({ onSearch }) => {
       </div>
 
       <div className="form-group">
+      <label>Postcode Area</label>
+      <input
+          type="text"
+          placeholder="e.g., BR1, NW1"
+          value={searchCriteria.postcode}
+          onChange={(e) => handleChange('postcode', e.target.value.toUpperCase())}
+        />
+      </div>
+
+      <div className="form-group">
         <label>Bedrooms</label>
         <div className="range-inputs">
           <select
@@ -100,16 +111,6 @@ const SearchForm = ({ onSearch }) => {
             <option value="5">5+</option>
           </select>
         </div>
-      </div>
-
-      <div className="form-group">
-        <label>Postcode Area</label>
-        <input
-          type="text"
-          placeholder="e.g., BR1, NW1"
-          value={searchCriteria.postcode}
-          onChange={(e) => handleChange('postcode', e.target.value.toUpperCase())}
-        />
       </div>
 
       <div className="form-buttons">

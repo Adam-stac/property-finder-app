@@ -1,7 +1,7 @@
 import './App.css';
 import { useState } from 'react';
-import PropertyList from './components/PropertyList';
-import SearchForm from './components/SearchForm';
+import PropertyList from './components/PropertyList/PropertyList';
+import SearchForm from './components/SearchForm/SearchForm';
 import propertiesData from './data/properties.json';
 
 
@@ -57,8 +57,9 @@ function App() {
         <h1>Property Finder</h1>
       </header>
       
-      <main>
+      <main className="main-container">
         <SearchForm onSearch={handleSearch} />
+        <hr className="navy-separator" />
         <PropertyList properties={filteredProperties} />
       </main>
     </div>

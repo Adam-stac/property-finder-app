@@ -1,4 +1,5 @@
-import PropertyCard from './PropertyCard';
+import './PropertyList.css';
+import PropertyCard from '../PropertyCard/PropertyCard';
 
 const PropertyList = ({ properties }) => {
   return (
