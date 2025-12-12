@@ -1,7 +1,9 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 import PropertyList from './components/PropertyList/PropertyList';
 import SearchForm from './components/SearchForm/SearchForm';
+import PropertyDetail from './components/PropertyDetail/PropertyDetail';
 import propertiesData from './data/properties.json';
 
 
@@ -61,17 +63,32 @@ function App() {
 };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Property Finder</h1>
-      </header>
-      
-      <main className="main-container">
-        <SearchForm onSearch={handleSearch} />
-        <hr className="navy-separator" />
-        <PropertyList properties={filteredProperties} />
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Property Finder</h1>
+        </header>
+
+        <main className="main-container">
+          <Routes>
+            <Route 
+              path="/" 
+              element={
+                <>
+                  <SearchForm onSearch={handleSearch} />
+                  <PropertyList properties={filteredProperties} />
+                </>
+              } 
+            />
+            <Route 
+              path="/property/:id" 
+              element={<PropertyDetail />} 
+            />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+ 
   );
 }
 
