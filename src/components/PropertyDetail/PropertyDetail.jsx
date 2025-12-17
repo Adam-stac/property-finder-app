@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import propertiesData from "../../data/properties.json";
@@ -14,12 +15,15 @@ const PropertyDetail = () => {
     return <p>Property not found.</p>;
   }
 
+  const [activeImage, setActiveImage] = useState(property.picture);
+
+
   return (
     <div className="property-detail">
 
       <div className="detail-image-wrapper">
         <img
-          src={property.picture}
+          src={activeImage}
           alt={`Property in ${property.location}`}
           className="detail-main-image"
         />
@@ -32,6 +36,7 @@ const PropertyDetail = () => {
             src={img}
             alt={`Thumbnail ${index + 1}`}
             className="thumbnail-image"
+            onClick={() => setActiveImage(img)}
           />
         ))}
       </div>
