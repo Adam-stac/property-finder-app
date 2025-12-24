@@ -50,6 +50,7 @@ const PropertyDetail = () => {
       <Tabs className="detail-tabs">
         <TabList>
           <Tab>Description</Tab>
+          <Tab>Floorplan</Tab>
           <Tab>Map</Tab>
         </TabList>
 
@@ -57,6 +58,14 @@ const PropertyDetail = () => {
           <p className="detail-description">
             {property.description}
           </p>
+        </TabPanel>
+
+         <TabPanel>
+          <img
+            src={property.floorplan}
+            alt="Floorplan"
+            className="floorplan-image"
+          />
         </TabPanel>
 
         <TabPanel>

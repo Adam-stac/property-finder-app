@@ -12,6 +12,7 @@
 			"picture":"/images/prop1/thumbnail.jpeg",
 			"url":"properties/prop1.html",
             "added": "2022-10-12",
+            "floorplan": "/images/prop1/floorplan1.jpg",
             "images": [
                 "/images/prop1/thumbnail.jpeg",
                 "/images/prop1/img2.jpeg",
@@ -35,6 +36,7 @@
 			"picture":"/images/prop2/thumbnail.jpeg",
 			"url":"properties/prop2.html",
             "added": "2022-09-14",
+            "floorplan": "/images/prop2/floorplan2.jpg",
             "images": [
                 "/images/prop2/thumbnail.jpeg",
                 "/images/prop2/img2.jpeg",
@@ -57,6 +59,7 @@
             "picture": "/images/prop3/thumbnail.jpeg",
             "url": "properties/prop3.html",
             "added": "2024-11-07",
+            "floorplan": "/images/prop3/floorplan3.jpg",
             "images": [
                 "/images/prop3/thumbnail.jpeg",
                 "/images/prop3/img2.jpeg",
