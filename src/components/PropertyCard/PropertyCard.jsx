@@ -11,10 +11,19 @@ const PropertyCard = ({ property, onAddFavourite, isFavourite }) => {
     e.preventDefault();
     onAddFavourite(property.id);
   };
+
+   // Store property ID in drag event
+  const handleDragStart = (e) => {
+    e.dataTransfer.setData("propertyId", property.id);
+  };
   
   return (
     <Link to={`/property/${property.id}`} className="property-link">
-      <div className="property-card">
+      <div
+        className="property-card"
+        draggable
+        onDragStart={handleDragStart}
+      >
         <img 
           src={property.picture} 
           alt={`Property in ${property.location}`}

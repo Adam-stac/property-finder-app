@@ -113,12 +113,14 @@ function App() {
                     favourites={favouriteProperties}
                     onRemoveFavourite={removeFromFavourites}
                     onClearFavourites={clearFavourites}
+                    onAddFavourite={addToFavourites}
                   />
                 </div>
                 <PropertyList 
                   properties={filteredProperties}
                   onAddFavourite={addToFavourites}
                   isFavourite={isFavourite}
+                  onRemoveFavourite={removeFromFavourites}
                 />
                 </>
               } 
