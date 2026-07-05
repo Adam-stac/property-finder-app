@@ -7,6 +7,7 @@ import PropertyDetail from './components/PropertyDetail/PropertyDetail';
 import FavouritesPanel from './components/FavouritesPanel/FavouritesPanel';
 import propertiesData from './data/properties.json';
 import { filterProperties } from './utils/search';
+import { addFavourite, removeFavourite, isInFavourites } from './utils/favourites';
 
 
 function App() {
@@ -30,18 +31,18 @@ function App() {
       .filter(Boolean);
   }, [favouriteIds]);
 
-  // Add/remove/clear + duplicate prevention
+  // Add/remove/clear favourites using the extracted pure functions
   const addToFavourites = (propertyId) => {
-    setFavouriteIds((prev) => (prev.includes(propertyId) ? prev : [...prev, propertyId]));
+    setFavouriteIds((prev) => addFavourite(prev, propertyId));
   };
 
   const removeFromFavourites = (propertyId) => {
-    setFavouriteIds((prev) => prev.filter((id) => id !== propertyId));
+    setFavouriteIds((prev) => removeFavourite(prev, propertyId));
   };
 
   const clearFavourites = () => setFavouriteIds([]);
 
-  const isFavourite = (propertyId) => favouriteIds.includes(propertyId);
+  const isFavourite = (propertyId) => isInFavourites(favouriteIds, propertyId);
 
   // Run the search using the extracted pure filter function
   const handleSearch = (searchCriteria) => {
