@@ -42,22 +42,30 @@ body {
 }
 
 main {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;      
-    padding: 2rem;  
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
 }
-
-
 
 main > * {
   animation: fadeIn 0.4s ease;
 }
 
+/* Large screen: sidebar (search + favourites) left, results right */
 .main-container {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
+  width: 100%;
+}
+
+/* Sidebar stacks search form above favourites panel */
+.sidebar-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 0 0 340px;
 }
 
 @keyframes fadeIn {
@@ -65,19 +73,42 @@ main > * {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* Responsive: smaller than iPad landscape*/
+@media (max-width: 1024px) {
+  /* Stack everything vertically */
+  .main-container {
+    flex-direction: column;
+  }
+
+  /* Sidebar takes full width */
+  .sidebar-stack {
+    flex: unset;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  /* Search form and favourites panel share the row */
+  .sidebar-stack > * {
+    flex: 1 1 280px;
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+/* Responsive: mobile (600px) */
 @media (max-width: 600px) {
   .App-header h1 {
     font-size: 1.9rem;
   }
 
   main {
-    margin-top: 1.5rem;
+    padding: 1rem;
   }
 
+  /* Stack search form and favourites vertically on mobile */
   .sidebar-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  flex: 0 0 340px;
+    flex-direction: column;
   }
 }

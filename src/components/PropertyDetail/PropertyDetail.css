@@ -126,3 +126,40 @@
   padding: 1rem;
 }
 
+/* Responsive: smaller than iPad landscape */
+@media (max-width: 1024px) {
+  .property-detail {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .detail-main-image {
+    height: 300px;
+  }
+}
+
+/* Responsive: mobile  */
+@media (max-width: 600px) {
+  .property-detail {
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .detail-main-image {
+    height: 220px;
+  }
+
+  .detail-summary h2 {
+    font-size: 1.4rem;
+  }
+
+  .thumbnail-image {
+    width: 70px;
+    height: 62px;
+  }
+
+  .map-frame {
+    height: 260px;
+  }
+}

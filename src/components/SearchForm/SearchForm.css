@@ -3,11 +3,10 @@
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  max-width: 500px;
-  margin: 0 0 2rem 1.5rem;
+  width: 100%;
+  margin: 0;
   font-family: "Inter", system-ui, sans-serif;
   border: 1px solid #e5e7eb;
-  flex: 0 0 500px;
 }
 
 .search-form h2 {

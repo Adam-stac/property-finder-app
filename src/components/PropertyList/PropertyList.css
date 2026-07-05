@@ -1,6 +1,14 @@
 .property-list {
-  flex: 1; 
+  flex: 1;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
+}
+
+/* On tablet/mobile, single column */
+@media (max-width: 600px) {
+  .property-list {
+    grid-template-columns: 1fr;
+  }
 }

@@ -133,3 +133,16 @@
   color: #e53e3e;
   background: #fee2e2;
 }
+
+/* Responsive: smaller than iPad landscape */
+@media (max-width: 1024px) {
+  .favourites-panel {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .favourites-panel {
+    width: 100%;
+  }
+}
