@@ -47,5 +47,28 @@
   padding-top: 0.8rem;
 }
 
+.fav-btn {
+  margin-top: 0.75rem;
+  background: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #9ca3af;
+  transition: all 0.2s ease;
+  align-self: flex-start;
+}
+
+.fav-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.fav-btn--active {
+  color: #e53e3e;
+  border-color: #e53e3e;
+}
+
 
 

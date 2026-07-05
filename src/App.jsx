@@ -115,7 +115,11 @@ function App() {
                     onClearFavourites={clearFavourites}
                   />
                 </div>
-                <PropertyList properties={filteredProperties} />
+                <PropertyList 
+                  properties={filteredProperties}
+                  onAddFavourite={addToFavourites}
+                  isFavourite={isFavourite}
+                />
                 </>
               } 
             />

@@ -2,8 +2,15 @@ import './PropertyCard.css';
 import { Link } from "react-router-dom";
 
 
-const PropertyCard = ({ property }) => {
+const PropertyCard = ({ property, onAddFavourite, isFavourite }) => {
   const description = property.shortDescription;
+  const favourited = isFavourite(property.id);
+
+  const handleFavClick = (e) => {
+    // Prevent the Link from navigating when clicking the button
+    e.preventDefault();
+    onAddFavourite(property.id);
+  };
   
   return (
     <Link to={`/property/${property.id}`} className="property-link">
@@ -27,6 +34,15 @@ const PropertyCard = ({ property }) => {
           <span className="property-bedrooms">{property.bedrooms} bedroom{property.bedrooms !== 1 ? 's' : ''}</span>
           <span className="property-location">{property.location}</span>
         </div>
+
+        <button
+          className={`fav-btn ${favourited ? 'fav-btn--active' : ''}`}
+          onClick={handleFavClick}
+          aria-label={favourited ? 'Remove from favourites' : 'Add to favourites'}
+          type="button"
+        >
+          {favourited ? '♥' : '♡'}
+        </button>
       </div>
     </Link>
   );
