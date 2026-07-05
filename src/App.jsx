@@ -1,14 +1,46 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import PropertyList from './components/PropertyList/PropertyList';
 import SearchForm from './components/SearchForm/SearchForm';
 import PropertyDetail from './components/PropertyDetail/PropertyDetail';
+import FavouritesPanel from './components/FavouritesPanel/FavouritesPanel';
 import propertiesData from './data/properties.json';
 
 
 function App() {
   const [filteredProperties, setFilteredProperties] = useState(propertiesData.properties);
+
+  // ✅ NEW: favourites stored as IDs (prevents duplicates easily)
+  const [favouriteIds, setFavouriteIds] = useState(() => {
+    const saved = localStorage.getItem("favouriteIds");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  // ✅ NEW: persist favourites client-side
+  useEffect(() => {
+    localStorage.setItem("favouriteIds", JSON.stringify(favouriteIds));
+  }, [favouriteIds]);
+
+  // ✅ NEW: build favourite property objects from ids
+  const favouriteProperties = useMemo(() => {
+    return favouriteIds
+      .map((id) => propertiesData.properties.find((p) => p.id === id))
+      .filter(Boolean);
+  }, [favouriteIds]);
+
+  // ✅ NEW: add/remove/clear + duplicate prevention
+  const addToFavourites = (propertyId) => {
+    setFavouriteIds((prev) => (prev.includes(propertyId) ? prev : [...prev, propertyId]));
+  };
+
+  const removeFromFavourites = (propertyId) => {
+    setFavouriteIds((prev) => prev.filter((id) => id !== propertyId));
+  };
+
+  const clearFavourites = () => setFavouriteIds([]);
+
+  const isFavourite = (propertyId) => favouriteIds.includes(propertyId);
 
   const handleSearch = (searchCriteria) => {
   console.log('Search criteria:', searchCriteria);
@@ -75,8 +107,15 @@ function App() {
               path="/" 
               element={
                 <>
+                <div className="sidebar-stack">
                   <SearchForm onSearch={handleSearch} />
-                  <PropertyList properties={filteredProperties} />
+                  <FavouritesPanel
+                    favourites={favouriteProperties}
+                    onRemoveFavourite={removeFromFavourites}
+                    onClearFavourites={clearFavourites}
+                  />
+                </div>
+                <PropertyList properties={filteredProperties} />
                 </>
               } 
             />
