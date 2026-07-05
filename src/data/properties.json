@@ -82,6 +82,7 @@
             "picture": "/images/prop4/thumbnail.jpeg", 
             "url": "properties/prop4.html",
             "added": "2024-08-22",
+            "floorplan": "/images/prop4/floorplan4.jpg",
             "images": [
                 "/images/prop4/thumbnail.jpeg",
                 "/images/prop4/img2.jpeg",
@@ -106,6 +107,7 @@
             "picture": "/images/prop5/thumbnail.jpeg",
             "url": "properties/prop5.html", 
             "added": "2024-09-18",
+            "floorplan": "/images/prop5/floorplan5.jpg",
             "images": [
                 "/images/prop5/thumbnail.jpeg",
                 "/images/prop5/img1.jpeg",
@@ -129,6 +131,7 @@
             "picture": "/images/prop6/thumbnail.jpeg",
             "url": "properties/prop6.html",
             "added": "2025-11-01",
+            "floorplan": "/images/prop6/floorplan6.jpg",
             "images": [
                 "/images/prop6/thumbnail.jpeg",
                 "/images/prop6/img2.jpeg",
@@ -151,6 +154,7 @@
             "picture": "/images/prop7/thumbnail.jpeg",
             "url": "properties/prop7.html",
             "added": "2025-10-15",
+            "floorplan": "/images/prop7/floorplan7.jpg",
             "images": [
                 "/images/prop7/thumbnail.jpeg",
                 "/images/prop7/img2.jpeg",
@@ -164,7 +168,4 @@
                 "/images/prop7/img10.jpeg"
                 ]
         }
-
- 
-
 ]}
